@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Megan Trenkamp - Licensed Massage Therapist | Craniosacral Therapy & Reiki</title>
+    <meta name="description" content="Professional massage therapy, craniosacral therapy, and Reiki healing in Preston, IA. Licensed therapist Megan Trenkamp offers personalized treatments for pain relief and wellness. Book online today." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --warm-brown: hsl(35, 20%, 53%);
+            --soft-beige: hsl(38, 36%, 94%);
+            --sage-green: hsl(86, 25%, 62%);
+            --muted-purple: hsl(252, 10%, 45%);
+            --warm-white: hsl(38, 36%, 98%);
+            --charcoal: hsl(0, 0%, 18%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--warm-white);
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+        
+        .font-crimson { font-family: 'Crimson Text', serif; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+        
+        header {
+            background-color: var(--warm-white);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            padding: 1.5rem 0;
+        }
+        
+        .header-content {
+            text-align: center;
+        }
+        
+        .header-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--warm-brown);
+            margin-bottom: 0.25rem;
+        }
+        
+        .header-subtitle {
+            color: var(--muted-purple);
+            margin-bottom: 0.5rem;
+        }
+        
+        .header-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0.5rem 0;
+        }
+        
+        .divider-line {
+            height: 1px;
+            background-color: var(--warm-brown);
+            width: 3rem;
+        }
+        
+        .divider-symbol {
+            margin: 0 0.75rem;
+            color: var(--warm-brown);
+        }
+        
+        .header-tagline {
+            font-size: 0.75rem;
+            color: var(--muted-purple);
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            margin-top: 0.5rem;
+        }
+        
+        .hero {
+            padding: 4rem 0 6rem;
+            background: linear-gradient(to bottom, var(--warm-white), var(--soft-beige));
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--warm-brown);
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-text {
+            font-size: 1.25rem;
+            color: var(--muted-purple);
+            max-width: 48rem;
+            margin: 0 auto 2rem;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            font-size: 1.125rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .btn:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .btn-primary {
+            background-color: var(--sage-green);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: hsl(86, 25%, 55%);
+        }
+        
+        .btn-outline {
+            color: var(--warm-brown);
+            border: 2px solid var(--warm-brown);
+            background-color: transparent;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--warm-brown);
+            color: var(--warm-white);
+        }
+        
+        .services {
+            padding: 4rem 0 5rem;
+            background-color: var(--warm-white);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--warm-brown);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--muted-purple);
+            text-align: center;
+            max-width: 32rem;
+            margin: 0 auto 3rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        
+        .service-card {
+            background-color: var(--soft-beige);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .service-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .service-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--warm-brown);
+        }
+        
+        .service-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--sage-green);
+        }
+        
+        .service-description {
+            color: var(--muted-purple);
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+        
+        .services-cta {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .btn-secondary {
+            background-color: var(--warm-brown);
+            color: var(--warm-white);
+            padding: 1rem 3rem;
+        }
+        
+        .btn-secondary:hover {
+            background-color: hsl(35, 20%, 48%);
+        }
+        
+        .contact {
+            padding: 4rem 0 5rem;
+            background: linear-gradient(to bottom, var(--soft-beige), var(--warm-white));
+        }
+        
+        .contact-card {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 2.5rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+        
+        .contact-grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: 1fr;
+        }
+        
+        @media (min-width: 640px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .contact-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            background-color: var(--sage-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+        
+        .contact-icon::after {
+            content: '';
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: white;
+            border-radius: 50%;
+        }
+        
+        .contact-details h3 {
+            font-weight: 600;
+            color: var(--warm-brown);
+            margin-bottom: 0.25rem;
+        }
+        
+        .contact-details a {
+            color: var(--muted-purple);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        .contact-details a:hover {
+            color: var(--sage-green);
+        }
+        
+        .booking-card {
+            background-color: var(--soft-beige);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .booking-card h3 {
+            font-weight: 600;
+            color: var(--warm-brown);
+            margin-bottom: 0.75rem;
+        }
+        
+        .booking-card p {
+            font-size: 0.875rem;
+            color: var(--muted-purple);
+            margin-bottom: 1rem;
+        }
+        
+        .btn-booking {
+            background-color: var(--sage-green);
+            color: white;
+            padding: 0.75rem 1.5rem;
+        }
+        
+        .btn-booking:hover {
+            background-color: hsl(86, 25%, 55%);
+        }
+        
+        footer {
+            background-color: var(--warm-brown);
+            color: var(--warm-white);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-subtitle {
+            font-size: 0.875rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        
+        .footer-divider .divider-line {
+            background-color: var(--warm-white);
+            opacity: 0.3;
+        }
+        
+        .footer-divider .divider-symbol {
+            color: var(--warm-white);
+            opacity: 0.6;
+        }
+        
+        .footer-tagline {
+            font-size: 0.75rem;
+            opacity: 0.75;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-copyright {
+            font-size: 0.75rem;
+            opacity: 0.6;
+        }
+        
+        @media (max-width: 640px) {
+            .hero-title { font-size: 2rem; }
+            .section-title { font-size: 2rem; }
+            .header-title { font-size: 1.5rem; }
+            .container { padding: 0 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="header-title font-crimson">Megan Trenkamp</h1>
+                <p class="header-subtitle">Licensed Massage Therapist</p>
+                <div class="header-divider">
+                    <div class="divider-line"></div>
+                    <div class="divider-symbol">✦</div>
+                    <div class="divider-line"></div>
+                </div>
+                <p class="header-tagline">RAISING THE BAR FOR YOUR BODY, MIND, AND SPIRIT</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2 class="hero-title font-crimson">Welcome</h2>
+            <p class="hero-text">
+                Hi, my name is Megan and welcome! I have recently moved to the Maquoketa area from the Quad Cities and my massage office is now located in Preston, IA.
+                <br><br>
+                As a licensed massage therapist & energy worker I strive to work with each client as a unique individual to provide a session that is customized to their current needs whether it be physical, mental, or spiritual. My technique is focused, intuitive, and intentional to assist the body to release any subconscious guarding so that I may affect the deeper levels of tissue in a therapeutic way. I specialize in Craniosacral Therapy, Reiki, Therapeutic Massage, and Geriatric Massage. Let me help you elevate your life whether it be your day-to-day movements, pain management, general wellness, or maybe adding more balance on an energetic level.
+            </p>
+            <div class="hero-buttons">
+                <a href="https://megantrenkamplmt.clinicsense.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    Book Your Session
+                </a>
+                <a href="tel:563-508-6869" class="btn btn-outline">
+                    Call (563) 508-6869
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title font-crimson">Therapeutic Services</h2>
+            <p class="section-subtitle">
+                Each session is tailored to your individual needs, combining therapeutic techniques 
+                with a peaceful, healing environment.
+            </p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3 class="service-name">Craniosacral Therapy</h3>
+                        <span class="service-price">$65</span>
+                    </div>
+                    <p class="service-description">
+                        A very subtle and noninvasive technique that helps release restrictions throughout the body's fascia and connective tissue, especially within the cranium, spine, and sacrum systems. Helps with migraines and joint restrictions. Client remains fully clothed.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3 class="service-name">Reiki</h3>
+                        <span class="service-price">$65</span>
+                    </div>
+                    <p class="service-description">
+                        Universal Life Energy healing. Rei stands for Spiritual Wisdom and Ki is Life Energy. The client remains fully clothed while the energy work is being done. I am Level II of the Usui Holy Fire lineage.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3 class="service-name">30 Minute Massage</h3>
+                        <span class="service-price">$40</span>
+                    </div>
+                    <p class="service-description">
+                        Good for a quick spot treatment if you only have one issue going on and are short on time. Not recommended for ongoing maintenance or multiple areas that need to be addressed.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3 class="service-name">60 Minute Massage</h3>
+                        <span class="service-price">$70</span>
+                    </div>
+                    <p class="service-description">
+                        Good for ongoing maintenance, especially with multiple sessions per month. Light, medium, or deep pressure available. I'll utilize whatever techniques you're comfortable with to achieve your visit goals.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3 class="service-name">90 Minute Massage</h3>
+                        <span class="service-price">$100</span>
+                    </div>
+                    <p class="service-description">
+                        Great for monthly maintenance, if you haven't had a massage in a while, or multiple areas need attention. Allows time to slow down, ground, and release subconscious guarding. All pressure levels available.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3 class="service-name">Manual Lymphatic Drainage</h3>
+                        <span class="service-price">$65</span>
+                    </div>
+                    <p class="service-description">
+                        Very light pressure massage that manipulates lymph fluid to assist natural drainage. May increase immunity, decrease swelling & inflammation, and improve well-being. Highly suggested for persistent swelling and pre/post surgery. Typically 60 minutes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="services-cta">
+                <a href="https://megantrenkamplmt.clinicsense.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    Schedule Your Appointment
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title font-crimson">Contact & Location</h2>
+            <p class="section-subtitle">
+                Ready to begin your healing journey? Get in touch to schedule your session.
+            </p>
+            
+            <div class="contact-card">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon"></div>
+                            <div class="contact-details">
+                                <h3>Address</h3>
+                                <a href="https://maps.google.com/?q=12+West+White+Street,+Preston,+IA" target="_blank" rel="noopener noreferrer">
+                                    12 West White Street<br>
+                                    Preston, IA
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"></div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <a href="tel:563-508-6869">(563) 508-6869</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"></div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <a href="mailto:MeganTrenkampLMT@gmail.com">MeganTrenkampLMT@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"></div>
+                            <div class="contact-details">
+                                <h3>Facebook</h3>
+                                <a href="https://www.facebook.com/profile.php?id=100089249584157" target="_blank" rel="noopener noreferrer">Visit Facebook Page</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="booking-card">
+                        <h3>Ready to Book?</h3>
+                        <p>Online scheduling available 24/7 for your convenience.</p>
+                        <a href="https://megantrenkamplmt.clinicsense.com/" target="_blank" rel="noopener noreferrer" class="btn btn-booking">
+                            Book Online Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3 class="footer-title font-crimson">Megan Trenkamp</h3>
+            <p class="footer-subtitle">Licensed Massage Therapist • Craniosacral Therapy • Reiki</p>
+            <div class="footer-divider">
+                <div class="divider-line"></div>
+                <div class="divider-symbol">✦</div>
+                <div class="divider-line"></div>
+            </div>
+            <p class="footer-tagline">Raising the Bar for Your Body, Mind, and Spirit</p>
+            <p class="footer-copyright">© 2024 Megan Trenkamp LMT. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
